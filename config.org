@@ -1,0 +1,42 @@
+#+title: My GNU Emacs Config
+#+author: Samuel Talbot
+#+description: My DOOM Emacs Config
+#+startup: showeverything
+#+options: toc:2
+
+* TABLE ON CONTENTS :toc:
+- [[#org-mode][ORG MODE]]
+  - [[#enable-table-of-contents][Enable Table of Contents]]
+  - [[#org-bullets][Org Bullets]]
+- [[#things-i-need-to-sort][THINGS I NEED TO SORT]]
+
+* ORG MODE
+** Enable Table of Contents
+    #+begin_src elisp
+
+    #+end_src
+
+** Org Bullets
+#+begin_src elisp
+(package! org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+#+end_src
+
+
+* THINGS I NEED TO SORT
+#+begin_src elisp
+;; available. You can either set `doom-theme' or manually load a theme with the
+;; `load-theme' function. This is the default:
+(setq doom-theme 'doom-one)
+
+;; This determines the style of line numbers in effect. If set to `nil', line
+;; numbers are disabled. For relative line numbers, set this to `relative'.
+(setq display-line-numbers-type t)
+
+;; If you use `org' and don't want your org files in the default location below,
+;; change `org-directory'. It must be set before org loads!
+(setq org-directory "~/org/")
+
+;;(org-babel-load-file
+
+#+end_src
