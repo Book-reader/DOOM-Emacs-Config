@@ -7,11 +7,27 @@
 #+AUTO_TANGLE: t
 
 * TABLE ON CONTENTS :toc:
+- [[#appearance][APPEARANCE]]
+  - [[#theme][Theme]]
+  - [[#line-numbers][Line Numbers]]
 - [[#load-packages][LOAD PACKAGES]]
 - [[#org-mode][ORG MODE]]
   - [[#org-auto-tangle][Org Auto Tangle]]
   - [[#org-bullets][Org Bullets]]
-- [[#things-i-need-to-sort][THINGS I NEED TO SORT]]
+  - [[#org-directory][Org Directory]]
+
+* APPEARANCE
+** Theme
+The theme that DOOM Emacs uses
+#+begin_src elisp
+(setq doom-theme 'doom-one)
+#+end_src
+
+** Line Numbers
+Can be "t", "relative", or "nil"
+#+begin_src elisp
+(setq display-line-numbers-type t)
+#+end_src
 
 * LOAD PACKAGES
 Adds packages to packages.el
@@ -28,7 +44,6 @@ Adds packages to packages.el
   :hook (org-mode . org-auto-tangle-mode)
   :config
   (setq org-auto-tangle-default nil))
-
 (add-hook 'org-mode-hook 'org-auto-tangle-mode)
 #+end_src
 
@@ -37,19 +52,8 @@ Adds packages to packages.el
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 #+end_src
 
-* THINGS I NEED TO SORT
+** Org Directory
+Seems to be where Org files are stored? need to look into
 #+begin_src elisp
-;; available. You can either set `doom-theme' or manually load a theme with the
-;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
-
-;; This determines the style of line numbers in effect. If set to `nil', line
-;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
-
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
-
-;;(org-babel-load-file
 #+end_src
