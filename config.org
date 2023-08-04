@@ -1,27 +1,41 @@
-#+title: My GNU Emacs Config
-#+author: Samuel Talbot
-#+description: My DOOM Emacs Config
-#+startup: showeverything
-#+options: toc:2
+#+TITLE: My GNU Emacs Config
+#+AUTHOR: Samuel Talbot
+#+DESCRIPTION: My DOOM Emacs Config
+#+STARTUP: showeverything
+#+OPTIONS: toc:2
+#+PROPERTY: header-args :tangle config.el
+#+AUTO_TANGLE: t
 
 * TABLE ON CONTENTS :toc:
+- [[#load-packages][LOAD PACKAGES]]
 - [[#org-mode][ORG MODE]]
-  - [[#enable-table-of-contents][Enable Table of Contents]]
+  - [[#org-auto-tangle][Org Auto Tangle]]
   - [[#org-bullets][Org Bullets]]
 - [[#things-i-need-to-sort][THINGS I NEED TO SORT]]
 
-* ORG MODE
-** Enable Table of Contents
-    #+begin_src elisp
+* LOAD PACKAGES
+Adds packages to packages.el
+#+begin_src elisp :tangle packages.el
+(package! org-bullets)
+(package! org-auto-tangle)
+#+end_src
 
-    #+end_src
+* ORG MODE
+** Org Auto Tangle
+#+begin_src elisp
+(use-package! org-auto-tangle
+  :defer t
+  :hook (org-mode . org-auto-tangle-mode)
+  :config
+  (setq org-auto-tangle-default nil))
+
+(add-hook 'org-mode-hook 'org-auto-tangle-mode)
+#+end_src
 
 ** Org Bullets
 #+begin_src elisp
-(package! org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 #+end_src
-
 
 * THINGS I NEED TO SORT
 #+begin_src elisp
@@ -38,5 +52,4 @@
 (setq org-directory "~/org/")
 
 ;;(org-babel-load-file
-
 #+end_src

@@ -1,6 +1,11 @@
+(use-package! org-auto-tangle
+  :defer t
+  :hook (org-mode . org-auto-tangle-mode)
+  :config
+  (setq org-auto-tangle-default nil))
 
+(add-hook 'org-mode-hook 'org-auto-tangle-mode)
 
-(package! org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 ;; available. You can either set `doom-theme' or manually load a theme with the
