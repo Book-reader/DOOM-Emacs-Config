@@ -1,0 +1,2 @@
+#+title: Readme
+Its my [[https://github.com/doomemacs/doomemacs][DOOM Emacs]] config
