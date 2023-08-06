@@ -119,7 +119,7 @@ You can find the full list of doom modules [[https://github.com/doomemacs/doomem
        :email
 
        :app
-       everywhere        ; *leave* Emacs!? You must be joking
+
        :config
        ;;literate
        (default +bindings +smartparens))

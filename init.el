@@ -83,7 +83,7 @@
        :email
 
        :app
-       everywhere        ; *leave* Emacs!? You must be joking
+
        :config
        ;;literate
        (default +bindings +smartparens))
