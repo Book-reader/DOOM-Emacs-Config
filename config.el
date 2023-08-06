@@ -1,4 +1,4 @@
-(setq doom-theme 'doom-one)
+(setq doom-theme 'rebecca)
 
 (setq display-line-numbers-type t)
 

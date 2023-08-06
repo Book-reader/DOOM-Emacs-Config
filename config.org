@@ -21,7 +21,7 @@
 ** Theme
 The theme that DOOM Emacs uses
 #+begin_src elisp
-(setq doom-theme 'doom-one)
+(setq doom-theme 'rebecca)
 #+end_src
 
 ** Line Numbers
@@ -130,6 +130,7 @@ Adds packages to packages.el
 #+begin_src elisp :tangle packages.el
 (package! org-bullets)
 (package! org-auto-tangle)
+(package! rebecca-theme)
 #+end_src
 
 * ORG MODE
