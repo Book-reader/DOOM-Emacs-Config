@@ -6,7 +6,7 @@
 #+PROPERTY: header-args :tangle config.el
 #+AUTO_TANGLE: t
 
-* TABLE ON CONTENTS :toc:
+* TABLE OF CONTENTS :toc:
 - [[#appearance][APPEARANCE]]
   - [[#theme][Theme]]
   - [[#line-numbers][Line Numbers]]
